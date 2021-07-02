@@ -16,6 +16,9 @@
     
     var shift=1;
  var pixel=0;
+ 
+ let max = (a,b) => a>b ? a : b; 
+
 
 
     var canvas = document.querySelector('#my-canvas');
@@ -30,16 +33,17 @@
         context.fillStyle = color || '#000';
         
       	context.fillRect(roundedX, roundedY, 1, 1);
-      		context.fillRect(roundedX+1, roundedY, 1, 1);
-      			context.fillRect(roundedX+2, roundedY, 1, 1);
+      	context.fillRect(roundedX+1, roundedY, 1, 1);
+      	context.fillRect(roundedX+2, roundedY, 1, 1);
       			
-      				context.fillRect(roundedX, roundedY+1, 1, 1);
-      					context.fillRect(roundedX+1, roundedY+1, 1, 1);
-      						context.fillRect(roundedX+2, roundedY+1, 1, 1);
+      	context.fillRect(roundedX, roundedY+1, 1, 1);
+      	context.fillRect(roundedX+1, roundedY+1, 1, 1);
+      	context.fillRect(roundedX+2, roundedY+1, 1, 1);
       						
-      							context.fillRect(roundedX, roundedY+2, 1, 1);
-      								context.fillRect(roundedX+1, roundedY+2, 1, 1);
-      									context.fillRect(roundedX+2, roundedY+2, 1, 1);
+      	context.fillRect(roundedX, roundedY+2, 1, 1);
+      	context.fillRect(roundedX+1, roundedY+2, 1, 1);
+      	context.fillRect(roundedX+2, roundedY+2, 1, 1);
+      	
         context.fill();
     }
     
@@ -50,11 +54,12 @@
       
       for (var ii=0;ii<=64;ii++) {
         
-          drawPixel(i, ii, "#6E65F1");
+          drawPixel(i, ii, 'blue');
           
       }
       
     }
+    
     
     drawPixel(0,0,"#D5D7DB");
       drawPixel(0,1,"#D5D7DB");
